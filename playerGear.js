@@ -961,7 +961,7 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=200
+                stats.capacity+=200000
             },
             desc:'A small bag.<br><br>+200 capacity',
             cost:['0 honey'],
