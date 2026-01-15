@@ -839,7 +839,7 @@ window.playerGear={
       stats.convertRate *= 200
     }
   },
-  desc:'Belt Pocket<br><br>+5,000 capacity<br>x1.15 loot luck<br>x200 convert rate',
+  desc:'Belt Pocket<br><br>+5,000 capacity<br>x20 loot luck<br>x200 convert rate',
   cost:['1 honey'],
 },
 

@@ -24444,7 +24444,7 @@ shovel: {
             
             tool:'shovel',
             boots:'none',
-            belt:'beltPocket',
+            belt : 'beltPocket',
             backpack:'pouch',
             mask:'none',
             leftGuard:'none',
