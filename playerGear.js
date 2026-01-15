@@ -644,7 +644,7 @@ window.playerGear={
 
             },
             desc:'This handsome mask is guaranteed to bring satisfaction into your life.<br><br>x1.75 capacity<br>x1.4 pollen<br>x1.35 pollen from bees<br>x1.15 bee ability rate<br>x1.5 honey from tokens<br>x1.8 convert rate<br>+30% defense<br>+Passive: Coin Scatter',
-            cost:['75000000 honey','35 oil','15 enzymes','1 goldEgg','999 treat'],
+            cost:['1 honey'],
         },
 
         fireMask:{
@@ -677,7 +677,7 @@ window.playerGear={
 
             },
             desc:'Ignite your mind to enhance your red bees.<br><br>x1.75 capacity<br>x1.6 red pollen<br>+20% instant red conversion<br>+50% instant flame conversion<br>+1 bee attack<br>+1 red bee attack<br>x1.15 bee ability rate<br>+35% defense<br>+Passive: Ignite',
-            cost:['50000000 honey','30 redExtract','15 enzymes','5 glue','300 strawberry'],
+            cost:['1 honey'],
         },
 
         bubbleMask:{
@@ -745,7 +745,7 @@ window.playerGear={
 
             },
             desc:'The offical mask of a gummy soldier.<br><br>x1.75 goo<br>x2 capacity<br>x1.75 white field capacity<br>x1.5 white pollen<br>x1.35 pollen<br>+25% instant white conversion<br>x1.5 honey from tokens<br>x1.75 convert rate<br>+30% defense<br>x1.2 bee ability rate<br>+Passive: Gummy Morph<br>+Passive: Coin Scatter',
-            cost:['5000000000 honey','150 glue','75 enzymes','75 oil','75 glitter'],
+            cost:['1 honey'],
         },
         
         diamondMask:{
@@ -818,7 +818,7 @@ window.playerGear={
                 player.addEffect('ignitePassive')
             },
             desc:'Embrace hate to take on the form of a Demon Bee. Become both extremely unpleasant and powerful.<br><br>x2 capacity<br>x1.75 red field capacity<br>x1.75 red pollen<br>+50% instant flame conversion<br>x2 flame pollen<br>x1.25 bee attack<br>+35% defense<br>+20% bee ability rate<br>+Passive: X Flame<br>+Passive: Ignite',
-            cost:['5000000000 honey','350 stinger','250 redExtract','100 enzymes','75 glue'],
+            cost:['1 honey'],
         },
     },
     
@@ -1243,17 +1243,17 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.movementCollection+=15
-                stats.walkSpeed*=1.2
-                stats.jumpPower*=1.4
+                stats.movementCollection+=100000
+                stats.walkSpeed*=2.0
+                stats.jumpPower*=2.0
                 stats.pollenFromCoconuts*=2
-                stats.goo*=1.25
-                stats.beeSpeed*=1.3
-                stats.honeyFromTokens*=1.25
-                stats.redPollen*=1.1
-                stats.bluePollen*=1.1
-                stats.whitePollen*=1.1
-                stats.beeAttack*=1.1
+                stats.goo*=2.5
+                stats.beeSpeed*=5.0
+                stats.honeyFromTokens*=100.0
+                stats.redPollen*=5.0
+                stats.bluePollen*=5.0
+                stats.whitePollen*=5.0
+                stats.beeAttack*=5.0
                 stats.convertRateAtHive*=2
                 player.addEffect('coconutHastePassive')
             },
