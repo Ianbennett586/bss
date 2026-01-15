@@ -826,24 +826,33 @@ window.playerGear={
         
         none:{mesh:function(){},applyStats:function(){}},
 
-        beltPocket:{
-            
-            mesh:function(box,cylinder,sphere){
-                
-                box(0,-0.2,0.25,0.3,0.2,0.3,false,[0.7*1.2,0.5*1.2,0.2*1.2])
-                box(0,-0.27,0.25,0.295,0.2,0.2,false,[0.7,0.5,0.2])
-                box(0,-0.26,0.25,0.12,0.09,0.305,false,[0.4,0.4,0.4])
-            },
-            
-            applyStats:function(stats,player){
-                
-                stats.capacity+=5000
-                stats.lootLuck*=1.15
-                stats.convertRate*=100
-            },
-            desc:'Attaches to your waist to expand the size of your container.<br><br>+5,000 capacity<br>x1.15 loot luck<br>x1.1 convert rate',
-            cost:['1 honey'],
-        },
+       beltPocket: {
+
+    mesh:function(box,cylinder,sphere){
+
+        box(0,-0.2,0.25,0.3,0.2,0.3,false,[0.7*1.2,0.5*1.2,0.2*1.2])
+        box(0,-0.27,0.25,0.295,0.2,0.2,false,[0.7,0.5,0.2])
+        box(0,-0.26,0.25,0.12,0.09,0.305,false,[0.4,0.4,0.4])
+    },
+
+    applyStats:function(stats,player){
+
+        stats.capacity += 5000
+        stats.lootLuck *= 1.15
+
+        // REAL convert stat used by your engine
+        if (typeof stats.convertRateAtHive === "number") {
+            stats.convertRateAtHive *= 100
+        }
+
+        // safety fallback (some builds use this)
+        if (typeof stats.honeyConvertRate === "number") {
+            stats.honeyConvertRate *= 100
+        }
+    },
+
+    desc:'Attaches to your waist to expand the size of your container.<br><br>+5,000 capacity<br>x1.15 loot luck<br>x100 convert rate',
+    cost:['1 honey'],
 
         beltBag:{
             
