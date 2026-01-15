@@ -1202,10 +1202,15 @@ window.playerGear={
                 
                 stats.capacity+=350000000
                 stats.convertRate*=5
-                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.15)
-                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.15)
-                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.15)
-                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.1)
+    // ===== INSTANT CONVERSION (FIXED + OP) =====
+    if (typeof stats.instantRedConversion !== "number") stats.instantRedConversion = 0;
+    if (typeof stats.instantBlueConversion !== "number") stats.instantBlueConversion = 0;
+    if (typeof stats.instantWhiteConversion !== "number") stats.instantWhiteConversion = 0;
+
+    // +300% each (you can go higher)
+    stats.instantRedConversion   = window.applyPercentage(stats.instantRedConversion, 300);
+    stats.instantBlueConversion  = window.applyPercentage(stats.instantBlueConversion, 300);
+    stats.instantWhiteConversion = window.applyPercentage(stats.instantWhiteConversion, 300);
                 stats.whitePollen*=1.25
                 stats.whitePollen*=1.25
                 stats.redPollen*=1.25
