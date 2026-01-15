@@ -21379,20 +21379,17 @@ function BeeSwarmSimulator(DATA){
 
     gear.tool={
         
-        shovel:{
-            
-            collectPattern:[[0,0],[0,-1]],
-            collectAmount:500,
-            cooldown:0.1,
-            mesh:function(box,cylinder,sphere,star){
-                
-                box(-0.3,0,0.6,0.1,0.1,0.8,false,[0.5,0.2,0])
-                box(-0.3,0,1.2,0.3,0.1,0.4,false,[0.2,0.2,0.2])
-            },
-            desc:'A trusty shovel.<br><br>Collects 5 pollen from 2 flowers every 1s.',
-            cost:['0 honey']
-        },
-
+shovel: {
+  collectPattern: [[0,0],[0,-1]],
+  collectAmount: 500,
+  cooldown: 0.1,
+  mesh: function(box, cylinder, sphere, star) {
+    box(-0.3, 0, 0.6, 0.1, 0.1, 0.8, false, [0.5, 0.2, 0]);
+    box(-0.3, 0, 1.2, 0.3, 0.1, 0.4, false, [0.2, 0.2, 0.2]);
+  },
+  desc: 'A trusty shovel.<br><br>Collects 5 pollen from 2 flowers every 1s.',
+  cost: ['0 honey'],
+},
         rake:{
             
             collectPattern:[[0,0],[0,-1],[0,-2]],
@@ -34760,3 +34757,4 @@ function BeeSwarmSimulator(DATA){
     
 
 }
+
