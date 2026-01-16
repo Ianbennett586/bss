@@ -1161,33 +1161,33 @@ window.playerGear={
     cylinder(0.425,0,-0.6,0.2,0.57,10,0,0,100,90,0,90)
   },
   applyStats:function(stats,player){
-    stats.capacity+=3000000000000
-    stats.convertRate*=5
+  stats.capacity += 3000000000000;
+  stats.convertRate *= 5;
 
-    if(typeof stats.instantRedConversion!=="number") stats.instantRedConversion=0
-    if(typeof stats.instantBlueConversion!=="number") stats.instantBlueConversion=0
-    if(typeof stats.instantWhiteConversion!=="number") stats.instantWhiteConversion=0
+  if(typeof stats.instantRedConversion!=="number") stats.instantRedConversion=0;
+  if(typeof stats.instantBlueConversion!=="number") stats.instantBlueConversion=0;
+  if(typeof stats.instantWhiteConversion!=="number") stats.instantWhiteConversion=0;
 
-    // 100% instant conversion
-    stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,1)
-    stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,1)
-    stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,1)
+  // 100% instant conversion
+  stats.instantRedConversion   = window.applyPercentage(stats.instantRedConversion, 1);
+  stats.instantBlueConversion  = window.applyPercentage(stats.instantBlueConversion, 1);
+  stats.instantWhiteConversion = window.applyPercentage(stats.instantWhiteConversion, 1);
 
-    stats.whitePollen*=1.25
-    stats.whitePollen*=1.25
-    stats.redPollen*=1.25
-    stats.bluePollen*=1.25
+  stats.whitePollen *= 1.25;
+  stats.whitePollen *= 1.25;
+  stats.redPollen *= 1.25;
+  stats.bluePollen *= 1.25;
 
-    stats.whiteBeeAttack+=5
-    stats.redBeeAttack+=5
-    stats.blueBeeAttack+=5
+  stats.whiteBeeAttack += 2;
+  stats.redBeeAttack += 2;
+  stats.blueBeeAttack += 2;
 
-    stats.defense+=0.1
-    stats.honeyAtHive*=1.1
+  stats.defense += 0.1;
+  stats.honeyAtHive *= 1.1;
 
-    player.addEffect('inspireCoconutsPassive')
-    player.addEffect('emergencyCoconutShieldPassive')
-  },
+  player.addEffect('inspireCoconutsPassive');
+  player.addEffect('emergencyCoconutShieldPassive');
+},
   desc:'A back-mounted coconut that protects you during emergencies.<br><br>+3,000,000,000,000 capacity<br>x5 convert rate<br>Instant conversion (maxed)<br>x1.25 pollen<br>x1.25 white pollen<br>+2 bee attack<br>+10% defense<br>x1.1 honey at hive<br>+Passive: Emergency Coconut Shield<br>+Passive: Inspire Coconuts',
   cost:['1 honey'],
 },
@@ -1627,7 +1627,7 @@ window.playerGear={
                 stats.convertRate*=1.4
                 stats.capacity+=300000
                 stats.bluePollen*=1.35
-                stats.instantBlueConversion=window.applyPercentage(stats.instantConversion,50.0)
+                stats.instantBlueConversion=window.applyPercentage(stats.instantConversion,0.2)
                 stats.blueBombPollen*=1.5
                 stats.blueBeeAttack+=3
                 stats.whiteBeeAttack+=2
@@ -1638,5 +1638,4 @@ window.playerGear={
             cost:['1 honey'],
         },
     }
-}
 })()
