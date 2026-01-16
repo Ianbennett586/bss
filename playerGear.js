@@ -1185,48 +1185,60 @@ window.playerGear={
             cost:['1 honey'],
         },
         
-        coconutCanister:{
-            
-            mesh:function(box,cylinder,sphere){
-                
-                sphere(0,0,-0.6,1.3,2,0.4,0.2,0)
-                sphere(-0.3,0.45,-0.6,0.4,1,0.1,0.05,0)
-                sphere(-0.15,0.4,-0.9,0.4,1,0.1,0.05,0)
-                sphere(0.05,0.5,-0.6,0.4,1,0.1,0.05,0)
-                cylinder(0,0,-0.6,0.3,1.3,10,1.2,1.2,1.2,90,0,90)
-                cylinder(-0.425,0,-0.6,0.2,0.57,10,100,0,0,90,0,90)
-                cylinder(0.425,0,-0.6,0.2,0.57,10,0,0,100,90,0,90)
-            },
-            
-            applyStats:function(stats,player){
-                
-                stats.capacity+=350000000
-                stats.convertRate*=5
-    // ===== INSTANT CONVERSION (FIXED + OP) =====
-    if (typeof stats.instantRedConversion !== "number") stats.instantRedConversion = 0;
-    if (typeof stats.instantBlueConversion !== "number") stats.instantBlueConversion = 0;
-    if (typeof stats.instantWhiteConversion !== "number") stats.instantWhiteConversion = 0;
+       coconutCanister:{
+  mesh:function(box,cylinder,sphere){
 
-    // +300% each (you can go higher)
-    stats.instantRedConversion   = window.applyPercentage(stats.instantRedConversion, 0.80);
-    stats.instantBlueConversion  = window.applyPercentage(stats.instantBlueConversion, 0.80);
-    stats.instantWhiteConversion = window.applyPercentage(stats.instantWhiteConversion, 0.80);
-                stats.whitePollen*=1.25
-                stats.whitePollen*=1.25
-                stats.redPollen*=1.25
-                stats.bluePollen*=1.25
-                stats.whiteBeeAttack+=2
-                stats.redBeeAttack+=2
-                stats.blueBeeAttack+=2
-                stats.defense+=0.1
-                stats.honeyAtHive*=1.1
-                player.addEffect('inspireCoconutsPassive')
-                player.addEffect('emergencyCoconutShieldPassive')
-            },
-            desc:'A back-mounted coconut that protects you during emergencies.<br><br>+2,500,000 capacity<br>x5 convert rate<br>+15% instant conversion<br>+10% instant white conversion<br>x1.25 pollen<br>x1.25 white pollen<br>+2 bee attack<br>+10% defense<br>x1.1 honey at hive<br>+Passive: Emergengy Coconut Shield<br>+Passive: Inspire Coconuts',
-            cost:['1 honey'],
-        }
-    },
+    sphere(0,0,-0.6,1.3,2,0.4,0.2,0);
+    sphere(-0.3,0.45,-0.6,0.4,1,0.1,0.05,0);
+    sphere(-0.15,0.4,-0.9,0.4,1,0.1,0.05,0);
+    sphere(0.05,0.5,-0.6,0.4,1,0.1,0.05,0);
+    cylinder(0,0,-0.6,0.3,1.3,10,1.2,1.2,1.2,90,0,90);
+    cylinder(-0.425,0,-0.6,0.2,0.57,10,100,0,0,90,0,90);
+    cylinder(0.425,0,-0.6,0.2,0.57,10,0,0,100,90,0,90);
+  },
+
+  applyStats:function(stats,player){
+    stats.capacity += 3000000000000;
+    stats.convertRate *= 5;
+
+    if(typeof stats.instantRedConversion !== "number") stats.instantRedConversion = 0;
+    if(typeof stats.instantBlueConversion !== "number") stats.instantBlueConversion = 0;
+    if(typeof stats.instantWhiteConversion !== "number") stats.instantWhiteConversion = 0;
+
+    stats.instantRedConversion = window.applyPercentage(stats.instantRedConversion,3.0);
+    stats.instantBlueConversion = window.applyPercentage(stats.instantBlueConversion,3.0);
+    stats.instantWhiteConversion = window.applyPercentage(stats.instantWhiteConversion,3.0);
+
+    stats.whitePollen *= 1.25;
+    stats.whitePollen *= 1.25;
+    stats.redPollen *= 1.25;
+    stats.bluePollen *= 1.25;
+
+    stats.whiteBeeAttack += 2;
+    stats.redBeeAttack += 2;
+    stats.blueBeeAttack += 2;
+
+    stats.defense += 0.1;
+    stats.honeyAtHive *= 1.1;
+
+    player.addEffect("inspireCoconutsPassive");
+    player.addEffect("emergencyCoconutShieldPassive");
+  },
+
+  desc:
+    "A back-mounted coconut that protects you during emergencies.<br><br>" +
+    "+3,000,000,000,000 capacity<br>" +
+    "x5 convert rate<br>" +
+    "Massive instant conversion boost<br>" +
+    "x1.25 pollen<br>" +
+    "+2 bee attack<br>" +
+    "+10% defense<br>" +
+    "x1.1 honey at hive<br>" +
+    "+Passive: Emergency Coconut Shield<br>" +
+    "+Passive: Inspire Coconuts",
+
+  cost:["1 honey"],
+},
     
     boots:{
         
