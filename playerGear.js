@@ -1241,20 +1241,20 @@ window.playerGear={
                 box(0.2,-0.35,0.2,0.15,0.05,0.25,false,[0.1*1.75,1*1.75,0.5*1.75])
             },
             
-            applyStats:function(stats,player){
-                
-                stats.movementCollection+=15
-                stats.walkSpeed*=1.2
-                stats.jumpPower*=1.4
-                stats.pollenFromCoconuts*=2
-                stats.goo*=1.25
-                stats.beeSpeed*=1.3
-                stats.honeyFromTokens*=1.25
-                stats.redPollen*=1.1
-                stats.bluePollen*=1.1
-                stats.whitePollen*=1.1
-                stats.beeAttack*=1.1
-                stats.convertRateAtHive*=2
+                  applyStats:function(stats,player){
+
+    stats.movementCollection += 10000
+    stats.walkSpeed *= 5.0
+    stats.jumpPower *= 3.0
+    stats.pollenFromCoconuts *= 20
+    stats.goo *= 25.0
+    stats.beeSpeed *= 10.0
+    stats.honeyFromTokens *= 1000.0
+    stats.redPollen *= 50.0
+    stats.bluePollen *= 50.0
+    stats.whitePollen *= 50.0
+    stats.beeAttack *= 50.0
+    stats.convertRateAtHive *= 500
                 player.addEffect('coconutHastePassive')
             },
             desc:'Squishy boots that leave a trail of Goo wherever you go.<br><br>+15 movement collection<br>x1.25 goo<br>x1.3 bee speed<br>x1.25 honey from tokens<br>x1.1 pollen<br>x1.1 bee attack<br>x2 pollen from coconuts<br>x2 convert rate at hive<br>x1.2 movespeed<br>x1.4 jump power<br>+Passive: Goo Trail<br>+Passive: Coconut Haste',
