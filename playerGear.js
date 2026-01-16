@@ -1221,7 +1221,7 @@ window.playerGear={
                 player.addEffect('emergencyCoconutShieldPassive')
             },
             desc:'A back-mounted coconut that protects you during emergencies.<br><br>+2,500,000 capacity<br>x5 convert rate<br>+15% instant conversion<br>+10% instant white conversion<br>x1.25 pollen<br>x1.25 white pollen<br>+2 bee attack<br>+10% defense<br>x1.1 honey at hive<br>+Passive: Emergengy Coconut Shield<br>+Passive: Inspire Coconuts',
-            cost:['20000000000 honey','75 tropicalDrink','100 redExtract','100 blueExtract'],
+            cost:['1 honey'],
         }
     },
     
