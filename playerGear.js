@@ -932,7 +932,7 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=300000
+                stats.capacity+=3000000
                 stats.capacityMultiplier*=2
                 stats.lootLuck*=2
                 stats.convertRate*=1.8
