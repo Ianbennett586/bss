@@ -1169,9 +1169,9 @@ window.playerGear={
     if(typeof stats.instantWhiteConversion!=="number") stats.instantWhiteConversion=0
 
     // 100% instant conversion
-    stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,3)
-    stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,3)
-    stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,3)
+    stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,1)
+    stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,1)
+    stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,1)
 
     stats.whitePollen*=1.25
     stats.whitePollen*=1.25
